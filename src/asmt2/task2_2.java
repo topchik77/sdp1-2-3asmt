@@ -1,5 +1,8 @@
 package asmt2;
 
+// The abstract factory allows you to add new themes without changing existing code,
+// which also corresponds to the principle of OCP
+
 abstract class ThemeFactory {
     public abstract Button createButton();
     public abstract Checkbox createCheckbox();
