@@ -1,5 +1,7 @@
 package asmt4;
 
+import java.util.Scanner;
+
 interface Expression {
     int interpret();
 }
@@ -73,9 +75,15 @@ class Interpreter {
 
 public class Part_1 {
     public static void main(String[] args) {
-        String problem = "5 + 2 - 3";
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a math problem ");
+        String problem = scanner.nextLine();
+
         Expression expression = Interpreter.parse(problem);
         int result = expression.interpret();
+
         System.out.println("Result: " + result);
     }
 }
